@@ -86,14 +86,14 @@
         $disp ->execute();
 
         $num_h = 1;
-         
+        $a = strtotime($fecha_a);
+        $b = strtotime($fecha_b);
+      
         foreach ($disp as $clave => $datos)
         {
-               //obtenemos los parametros
+               
                $num_h = $datos['id_disponible'];
-               $a = strtotime($fecha_a);
-               $b = strtotime($fecha_b);
-                
+         
                //llamamos funcion y comprobamos si estan disponibles las fechas
                if(disponible($num_h,$a,$b,$id_h) == 1)
                {
